@@ -2,10 +2,11 @@
 
 import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider } from './theme-provider';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <ClerkProvider>
       <Toaster />
       <ThemeProvider
         attribute='class'
@@ -15,7 +16,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
       >
         {children}
       </ThemeProvider>
-    </>
+    </ClerkProvider>
   );
 };
 export default Providers;
