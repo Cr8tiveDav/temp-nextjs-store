@@ -27,16 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     // <ClerkProvider>
-    <html lang='en' suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Providers>
+    <Providers>
+      <html lang='en' suppressHydrationWarning>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
           <Navbar />
           <Container className='pt-20'>{children}</Container>
-        </Providers>
-      </body>
-    </html>
+        </body>
+      </html>
+    </Providers>
     // </ClerkProvider>
   );
 }
